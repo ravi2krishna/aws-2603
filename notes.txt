@@ -1,0 +1,133 @@
+Class - 1
+==========
+
+    -> AWS - Amazon Web Services 
+
+        -> Cloud Computing 
+
+            -> Any Application Has "Data" i.e Images, Text, Videos, Audio etc 
+
+                -> Where is this Data Coming From ??
+
+                    -> Servers (Hardware - CPU / RAM / HDD etc)
+
+                        -> Where is this Server Coming From ??
+
+                            -> Data Centers 
+
+            -> NOTE: Data -> Application -> Server -> Datacenter
+
+
+    -> Data center
+
+        -> A data center is a physical facility or building that houses 
+        groups of networked computer servers, data storage drives, and network equipment 
+        used by companies to store, process, and share digital information and run applications.
+
+        -> https://datacenters.microsoft.com/wp-content/uploads/2025/11/OMB-Datacenter-11_11-Hero.jpg
+
+        -> Main Parts of a Data Center:
+        
+            -> Servers: 
+                
+                -> High-power computers that process data and run software programs.
+                
+            -> Storage Systems: 
+            
+                -> Hard drives and arrays that hold large amounts of digital files and records.
+                
+            -> Network Gear: 
+            
+                -> Routers, switches, and firewalls that move data safely in and out of the facility.
+                
+            -> Cooling and Power: 
+            
+                -> Heavy-duty air conditioners, fans, backup generators, and power grids to 
+                keep machines running non-stop.
+
+        -> Setting Up Data center physically 
+
+            -> First, We Need To Buy / Lease Land 
+
+            -> Construct / Rent a physical building 
+
+            -> Need To Hire Security Personnel To Mange Building 
+
+            -> We Need To Buy Computer Components Like Servers, 
+            Storage Systems, Network Gear, Cooling, Power etc
+
+            -> Once Components Received, we need to hire Human Resources 
+            to manage Servers, Storage Systems, Network Gear, Cooling, Power 
+            Server Admins, Storage Admins, Network Admins, AC Technicians, Electricians etc 
+
+        -> NOTE: To Setup and Manage datacenters, we need lot of expenditure(expenses) and 
+        lot of human resources to manage, which needs a loy of time and money. 
+
+
+    -> Cloud Computing (Cloud Datacenters)
+
+        -> Google / Amazon / Microsoft / Oracle (Already Established in IT For Long Time)
+
+            -> They already have infrastructure with them (Servers, Storage, Network etc)
+
+        -> In 2006 Amazon Started Renting Out Infrastructure  
+
+            -> NOTE: I Have 5 Bikes, i'm not using all these 5 bikes, maybe 2 i'm using
+            now 3 bikes are sitting idle at home, i started posting for rental 
+
+                -> 1 hour - 50 ₹  
+                -> 5 hour - 200 ₹ 
+                -> 10 hour - 400 ₹ 
+                -> 24 hour - 900 ₹ 
+
+            -> In 2006 Amazon Started Renting Out Storage 
+
+                -> 100 GB / 1 Week / 1 Month / 1 Year / 3 Years - ₹₹₹₹₹₹ - ₹₹₹₹ - ₹₹ - ₹   
+
+
+        -> The Cloud can also refer to Cloud computing is the 
+        "on-demand" availability of compute power, database storage, 
+        applications, and other IT resources, through Cloud Platforms / Vendors 
+        (AWS / AZURE / GOOGLE / ORACLE etc) via INTERNET with PAY AS YOU GO PRICING. 
+
+            -> NOTE: Cloud computing is similar to Online Ride Services 
+
+                -> "on-demand" - Wants Bike at 7 AM / 10 AM / 2 PM / 9 PM etc
+
+                -> compute power, database storage etc - Bikes / Autos / Cars / Porters etc 
+
+                -> Cloud Platforms / Vendors AWS / AZURE / etc - Ride Platforms / Vendors Rapido / Ola etc 
+
+                -> Via INTERNET (Apps Like Rapido / Ola) - Via INTERNET (AWS Portal / Azure Portal etc)
+
+                    -> https://cdn.dribbble.com/userupload/4095521/file/original-eda041be619716a6213598f3cd0fe864.png?resize=1600x1200
+
+                    -> https://d2908q01vomqb2.cloudfront.net/da4b9237bacccdf19c0760cab7aec4a8359010b0/2023/11/14/2023-myapplications-1-console-home.jpg
+
+                -> PAY AS YOU GO PRICING 
+
+                    -> type of ride / number of kilometers traveled 
+
+                        -> bike / 5 kilometers - ₹₹
+
+                        -> bike / 10 kilometers - ₹₹₹₹
+
+                        -> car / 5 kilometers - ₹₹₹₹₹ 
+
+                    -> type of server / storage / size / time(duration)
+
+                        -> 1 server / 500 GB Storage / 1 hour - ₹₹
+
+                        -> 1 server / 1000 GB Storage / 1 hour - ₹₹₹ 
+
+                        -> 1 server / 1000 GB Storage / 2 hour - ₹₹₹₹₹ 
+
+
+
+
+
+
+
+
+
+
