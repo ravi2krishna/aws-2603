@@ -123,11 +123,133 @@ Class - 1
                         -> 1 server / 1000 GB Storage / 2 hour - ₹₹₹₹₹ 
 
 
+Class - 2
+==========
+
+    -> Cloud Offerings 
+
+        -> Cloud Offerings Provide On-Demand Access to 
+        Computing, Storage, Network and Softwares Resources Over the Internet. 
+
+            -> IAAS - Infrastructure As A Service 
+
+            -> PAAS - Platform As A Service 
+
+            -> SAAS - Software As A Service 
+
+        -> NOTE: Similar To Online Ride Offerings (Rapido)
+        Scooty, Bike, Autos, Hatchback Cars, Sedan Cars, SUV Cars 
+
+            -> As a customer i want Bus or Truck, Not Available 
 
 
+        -> IAAS - Infrastructure As A Service 
+
+            -> IAAS Model Provides Raw Computing Infrastructure Like Servers, Storage, Network
+
+            -> You Manage Underlying Components On Top Of Infrastructure 
+
+            -> https://miro.medium.com/v2/resize:fit:1400/1*VIzchB0D3t1awTzj3sfe1g.png
+
+            -> Server For Myntra Application
+
+                -> Hardware and Virtualization will be provided and managed by Vendor 
+
+                    -> 4 CPU's - 16 GB RAM - 500 GB SSD Storage - Networking 
+
+                -> As Customer (You) Need To Manage 
+
+                    -> Linux Ubuntu Operating System
+
+                    -> Tomcat / Jboss / Web Logic  
+
+                    -> Runtime (Java, Python etc)
+
+                    -> Data (Code, Database)
+
+                    -> Myntra Application Running 
+
+                -> Examples: AWS EC2 - AWS VPC - etc 
+
+                -> Cost: ₹₹₹₹ 
+
+                -> Human Resources: More (Different Admin, Developers)
 
 
+        
+        -> PAAS - Platform As A Service 
+
+            -> PAAS Model Delivers Frameworks For "Developers" 
+            to Build, Test and Deploy Softwares / Applications 
+            Without Managing Underlying Hardware, Middleware and Runtime.
+
+            -> Server For Myntra Application With Linux Ubuntu Operating System, 
+            Tomcat Server and Java Runtime.
+
+            -> Hardware, Virtualization and Platform For You Applications 
+            will also be provided and managed by Vendor 
+
+                -> 4 CPU's - 16 GB RAM - 500 GB SSD Storage - Networking - Linux Ubuntu OS -> Tomcat Installed and Running -> Java Installed 
+                    
+            -> As Customer (You) Need To Manage 
+
+                -> Data and Applications Only 
+
+            -> Examples: AWS Elastic Beanstalk - AWS RDS - AWS EKS etc 
+
+            -> Human Resources: Less (Developers)
+            
+            -> Cost: ₹₹₹₹₹₹₹₹₹
+
+        
+            -> NOTE: We may use standalone Service i.e Only IAAS or Combine IAAS + PAAS 
+
+            -> Myntra Application Requires (Developers Perspective)
+
+                -> Web Server it's easy to manage - IAAS 
+
+                -> Database Server it's bit difficult to manage - so i will choose PAAS 
+
+                -> Solution 1 : Web Server (IAAS) + Database Server (IAAS) - ₹₹
+
+                -> Solution 2 : Web Server (IAAS) + Database Server (PAAS) - ₹₹₹₹ 
+
+                -> Solution 3 : Web Server (PAAS) + Database Server (PAAS) - ₹₹₹₹₹₹₹₹₹₹ 
+
+        
+        
+        -> SAAS - Software As A Service 
+
+            -> SAAS Model Provides Fully Functional and Ready To Use Softwares / Applications 
+
+            -> Generally Accessed Via Web Browsers 
+
+            -> Examples: Salesforce - Microsoft 365 - Google Workspace 
+
+            -> Server For Myntra Application With Linux Ubuntu Operating System, 
+            Tomcat Server, Java Runtime, Design Database and Code Myntra Application. 
+
+            -> Hardware, Virtualization, Platform and Application also provided and managed by Vendor 
+
+                -> 4 CPU's - 16 GB RAM - 500 GB SSD Storage - Networking - Linux Ubuntu OS -> Tomcat Installed and Running -> Java Installed -> Data and Applications is also ready to use 
+                    
+            -> As Customer (You) Need To Manage 
+
+                -> NOTHING 
+
+            -> Examples From AWS: AWS Chime(Online Meetings, Video Conferences) - AWS Workspaces etc 
 
 
+            -> Customer-1: Needs Only Hardware i.e Only IaaS
 
+            -> Customer-2: Needs Hardware + Platform i.e IaaS + PaaS 
+
+            -> Customer-3: Needs Direct Application i.e SaaS 
+
+
+        -> IaaS: Rent Infrastructure - You Manage OS, Middleware & Apps - AWS EC2, AWS VPC, AWS EBS
+
+        -> PaaS: Build & Deploy Apps - You Manage Apps - AWS Elastic Beanstalk - AWS RDS, AWS EKS 
+
+        -> SaaS: Use Apps - vendor manages everything - AWS Chime - AWS Connect - AWS Workspaces
 
