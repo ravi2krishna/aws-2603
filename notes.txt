@@ -253,3 +253,147 @@ Class - 2
 
         -> SaaS: Use Apps - vendor manages everything - AWS Chime - AWS Connect - AWS Workspaces
 
+
+Class - 3
+==========
+
+    -> Infrastructure 
+
+        -> Say we have an ecommerce application (https://www.myntra.com/)
+        which requires Infrastructure to setup 
+
+            -> Servers 
+
+            -> Storage 
+
+            -> Networking 
+
+            -> Database 
+
+            -> Security 
+
+            -> etc 
+
+        -> NOTE: Above Components are not applications, but required for Setting up application  
+
+            -> Servers 
+                +
+            -> Storage 
+                +
+            -> Networking           -->  My ecommerce Application (https://www.myntra.com/)
+                +
+            -> Database 
+                +
+            -> Security 
+                +
+            -> etc
+
+        -> NOTE: Combination Of Above Components my application  
+
+        -> Now We Want To Setup Myntra Application On Cloud (AWS) 
+        i.e we need infrastructure from AWS  
+
+            -> Servers          -   AWS EC2 Service  
+
+            -> Storage          -   AWS S3 Service
+
+            -> Networking       -   AWS VPC Service 
+
+            -> Database         -   AWS RDS Service
+
+            -> Security         -   AWS IAM Service
+
+            -> etc              -   AWS etc Services 
+
+        -> NOTE: Above CloudComponents are not applications, but required for Setting up application  
+
+            -> AWS EC2 Service 
+                +
+            -> AWS S3 Service 
+                +
+            -> AWS VPC Service            -->  My ecommerce Application (https://www.myntra.com/)
+                +
+            -> AWS RDS Service 
+                +
+            -> AWS IAM Service 
+                +
+            -> AWS etc Services 
+
+        -> NOTE: Combination Of Above Cloud Services is my application  
+
+
+    -> NOTE: Real World Application Using AWS Cloud Infrastructure
+    https://media.licdn.com/dms/image/v2/D4D12AQFI8sqvP4xFFQ/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1700537758681?e=2147483647&v=beta&t=zE97TFGw5FQJEjUksqx7SohNsqqV57-IYQ_pj7K2M2U     
+
+    
+    -> GOAL 1: To Learn About Individual AWS Services i.e 
+    AWS EC2 Service, AWS S3 Service, AWS VPC Service  etc 
+
+    -> GOAL 2: Combine Multiple Services To Build Solution (Applications)
+    AWS EC2 Service + AWS S3 Service + AWS VPC Service  == My Application On Cloud 
+
+    -> GOAL 3: Once Application is powered by AWS Services, the application 
+    should have following characteristics (4 Pillars Of Cloud)
+
+        -> High Availability 
+
+        -> Fault Tolerance 
+
+        -> Scalability 
+
+        -> Security 
+
+    -> Cloud Terminology
+
+        -> High Availability      
+
+            -> High Availability in AWS ensures your applications are continuously 
+            accessible and operational (24 X 7)
+
+            -> https://drive.google.com/file/d/16O-aDK-g_CCJpWoyvho79f_H2SUplCT2/view - No High Availability
+
+            -> https://gmail.com - Highly Available
+
+        
+        -> Fault Tolerance 
+
+            -> Fault Tolerance in AWS refers to the ability of a system to continue 
+            operating without interruption in the event of hardware failures 
+
+            -> Fault Tolerance is associated with Self Healing 
+
+            -> https://assets.enterprisestorageforum.com/uploads/2021/02/understanding-fault-tolerance-securing-your-system_6019c7b9d29a4.png 
+
+            -> NOTE: Just like a power generator, will be active when we lose power in building 
+
+                -> A building without power generator is not Fault Tolerant 
+
+                -> A building with power generator is Fault Tolerant 
+
+            -> https://media.licdn.com/dms/image/v2/D5612AQEAzCREjM2taA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1725775705951?e=2147483647&v=beta&t=KvlTnTdCqnEQHIve0aGoksUSxAG69UalK3GLGcDgUso
+
+                -> NOTE: A Fault Tolerant System is indirectly an Highly Available System 
+
+
+        -> Scalability 
+
+            -> Scalability in AWS refers to the ability of a system to handle 
+            increasing workloads and accommodate according to growing demands.
+
+            -> https://steadybit.com/wp-content/uploads/2025/09/validate-aws-ecs-auto-scaling-comp.png
+
+                -> Increasing Hardware Resources - Scale Up 
+
+                -> Decreasing Hardware Resources - Scale Down 
+
+                -> Horizontal Scaling vs Vertical Scaling
+
+        
+        -> Security 
+
+            -> Security in AWS refers to the measures taken to protect cloud resources
+            and applications from Unauthorized Access. 
+
+                -> Account Level Security 
+
+                -> Application Level Security 
