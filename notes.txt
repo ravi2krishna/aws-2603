@@ -397,3 +397,65 @@ Class - 3
                 -> Account Level Security 
 
                 -> Application Level Security 
+
+
+
+Class - 4
+==========
+
+    -> AWS Global Infrastructure 
+
+        -> AWS global infrastructure is the most secure, reliable, and extensive cloud, 
+        providing diverse infrastructure solutions for running your applications.
+
+        -> https://aws.amazon.com/about-aws/global-infrastructure/
+
+        -> The AWS Cloud spans "124 Availability Zones" within "39 Geographic Regions", 
+        with announced plans for 7 more Availability Zones and 2 more AWS Regions 
+        in the Kingdom of Saudi Arabia, and Chile.
+
+        -> In Terms Of AWS, Infrastructure Is Made Of 
+
+            -> Regions 
+
+            -> Availability Zones 
+
+        -> AWS Provides It's Infrastructure For Customers Using Regions & Availability Zones 
+        i.e Servers, Storage, Network, Database etc are present in Regions & Availability Zones 
+
+
+        
+        -> Regions 
+
+            -> In AWS Region is a Geographic Location 
+
+            -> Each region contains multiple isolated Availability Zones
+
+            -> Regions operate completely independently from 
+            one another to prevent cascading failures.
+
+            -> Choosing a region close to your users minimizes network delay.
+
+                -> https://cdn.britannica.com/96/212396-050-1FC95D3E/world-map-with-country-borders.jpg
+
+            -> Compliance: Keep data inside specific geographic borders to meet legal rules.
+
+            -> Cost: Prices for services can change depending on the region.
+
+            -> New features or specific instance types may launch in certain regions first.
+
+
+        -> Availability Zones (AZ)
+
+            -> An AWS Availability Zone (AZ) is one or more discrete data centers with 
+            redundant power, cooling, and networking within an AWS Region.
+
+            -> Every region has at least three physically separate and isolated 
+            data center groups to ensure high availability.
+
+            -> Each AZ is physically separated by a meaningful distance (up to 100 km) 
+            to prevent localized disasters from affecting multiple zones, 
+            yet they are interconnected via high-bandwidth, low-latency private 
+            fiber-optic networks.
+
+            -> https://www.researchgate.net/profile/Ivan_Beres/publication/360541079/figure/fig1/AS:1154856056291328@1652350548135/AWS-Regions-and-Availability-Zones-Scott-nd.ppm
