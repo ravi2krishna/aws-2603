@@ -159,15 +159,15 @@ Class - 2
 
                 -> As Customer (You) Need To Manage 
 
-                    -> Linux Ubuntu Operating System
+                    -> Setup Linux Ubuntu Operating System
 
-                    -> Tomcat / Jboss / Web Logic  
+                    -> Setup Tomcat / Jboss / Web Logic  
 
-                    -> Runtime (Java, Python etc)
+                    -> Setup Runtime (Java, Python etc)
 
-                    -> Data (Code, Database)
+                    -> Setup Data (Code, Database)
 
-                    -> Myntra Application Running 
+                    -> Setup Myntra Application Running 
 
                 -> Examples: AWS EC2 - AWS VPC - etc 
 
@@ -459,3 +459,55 @@ Class - 4
             fiber-optic networks.
 
             -> https://www.researchgate.net/profile/Ivan_Beres/publication/360541079/figure/fig1/AS:1154856056291328@1652350548135/AWS-Regions-and-Availability-Zones-Scott-nd.ppm
+
+
+Class - 5
+==========
+
+    -> Setup AWS Cloud Account 
+
+        -> Following Details are Required To Setup AWS Free Account 
+
+            -> Email 
+            -> Mobile Number 
+            -> Card / UPI 
+            -> PAN / AADHAR 
+
+        -> NOTE: Initially AWS Charges ₹2 to verify bank account status 
+
+        -> NOTE: In Terms Of AWS Infrastructure, we have Edge Locations
+
+    
+    -> Edge Locations
+
+        -> To Understand Edge Locations, We Need To KNow About CDN - Content Delivery Network.
+
+        -> CDN - A Content Delivery Network (CDN) is a geographically distributed 
+        group of servers that speeds up internet content delivery by 
+        caching assets closer to users. 
+        By reducing the physical distance data must travel, CDNs minimize latency.
+
+            -> https://www.muvi.com/wp-content/uploads/2017/07/CDN_Muvi.png
+
+        
+        -> An AWS Edge Location is a data center in the AWS global network
+        to store cached content (images, videos, pdf etc) and 
+        process requests closer to end-users, drastically reducing latency by 
+        serving data from the nearest point rather than a distant location.
+    
+    
+    
+    -> AWS VPC (Virtual Private Cloud)
+
+        -> A Virtual Private Cloud (VPC) is a logically isolated, 
+        private network environment within a public cloud.
+
+        -> https://www.akamai.com/site/en/images/article/2023/akamai-public-private-cloud.png
+
+        -> https://images.netcomlearning.com/cms/images/virtual-private-cloud.jpg
+
+        -> NOTE: Having VPC is similar to having your own data center inside AWS. 
+
+        -> VPC is a service that lets customers(IBM) provision a logically isolated 
+        section of the AWS Cloud where you can launch AWS resources(Servers) 
+        in a VIRTUAL NETWORK that you define.
