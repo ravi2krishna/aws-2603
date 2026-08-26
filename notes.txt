@@ -564,3 +564,20 @@ Class - 6
         -> Security Groups (SG)
 
             -> Virtual firewalls that control inbound and outbound traffic at the instance level.
+
+
+Class - 7
+==========
+
+    -> VPC Workflow 
+
+        -> "To enable access to or from the internet to an instance(server) in a VPC subnet, 
+        you must attach an Internet gateway to your VPC, 
+        ensure that your subnet route table points to the Internet gateway and 
+        ensure that instance has a public IP address, 
+        and ensure that your network access control list and security group rules 
+        allow the relevant traffic to your instance" -- AWS
+
+        -> Easy way to understand VPC Workflow 
+
+            -> https://drive.google.com/file/d/1CxWWefIo_W3uhO9ccGYS-m_Gc0qXPKV4/view?usp=sharing   
