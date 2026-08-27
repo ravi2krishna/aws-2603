@@ -581,3 +581,109 @@ Class - 7
         -> Easy way to understand VPC Workflow 
 
             -> https://drive.google.com/file/d/1CxWWefIo_W3uhO9ccGYS-m_Gc0qXPKV4/view?usp=sharing   
+
+
+Class - 8
+==========
+
+    -> AWS Subnetting 
+
+        -> Subnetting is the practice of dividing a network into 
+        two or more smaller networks 
+
+        -> When You Create VPC and Subnet, You Must Specify CIDR Block 
+
+        -> NOTE: AWS Allowed CIDR Block Size is in between /16 to /28 
+
+            -> /16 - Maximum - 65536 Devices / IP Address 
+
+            -> /28 - Minimum - 16 Devices / IP Address 
+
+            /16 - 65536 Devices / IP Address 
+
+            /28 - 16 Devices / IP Address 
+
+            Allowed is 16 to 28 
+
+            Total Bits in NW is 32 Bits
+            Result = Total Bits - Your Netmask(NM)
+            No Of Devices / IP Address = 2 ^ Result
+
+            NM 
+            16 - Result = 32 - 16 i.e 16 - No Of Devices / IP Address = 2 ^ 16 = 65536
+            17 - Result = 32 - 17 i.e 15 - No Of Devices / IP Address = 2 ^ 15 = 32768
+            18 - Result = 32 - 18 i.e 14 - No Of Devices / IP Address = 2 ^ 14 = 16384
+            19 - Result = 32 - 19 i.e 13 - No Of Devices / IP Address = 2 ^ 13 = 8192
+            20 - Result = 32 - 20 i.e 12 - No Of Devices / IP Address = 2 ^ 12 = 4096
+            21 - Result = 32 - 21 i.e 11 - No Of Devices / IP Address = 2 ^ 11 = 2048
+            22 - Result = 32 - 22 i.e 10 - No Of Devices / IP Address = 2 ^ 10 = 1024
+            23 - Result = 32 - 23 i.e 9  - No Of Devices / IP Address = 2 ^ 9 = 512
+            24 - Result = 32 - 24 i.e 8  - No Of Devices / IP Address = 2 ^ 8 = 256
+            25 - Result = 32 - 25 i.e 7  - No Of Devices / IP Address = 2 ^ 7 = 128
+            26 - Result = 32 - 26 i.e 6  - No Of Devices / IP Address = 2 ^ 6 = 64
+            27 - Result = 32 - 27 i.e 5  - No Of Devices / IP Address = 2 ^ 5 = 32
+            28 - Result = 32 - 28 i.e 4 - No Of Devices / IP Address = 2 ^ 4 = 16
+
+        -> NOTE: AWS Recommends To Create VPC CIDR with Maximum Size i.e /16 for future 
+
+    
+Company VPC CIDR - 10.0.0.0/16 (This Company Can Have 65536 Devices)
+
+    -> Company Needs 4 Departments (Subnets) 
+
+        -> IT Subnet - 15k Devices - /18
+
+            -> IT Subnet Range is 10.0.0.0 - 10.0.63.255 
+
+                -> 10.0.0.0/18 
+
+                    -> 10.0.0.0 - 1st device
+                    -> 10.0.0.1 - 2nd device
+                    -> 10.0.0.2
+                    .
+                    .
+                    -> 10.0.0.255 - 256th device
+                    -> 10.0.1.0 - 257th device
+                    -> 10.0.1.1
+                    .
+                    -> 10.0.1.255
+                    -> 10.0.2.0
+                    -> 10.0.2.1
+                    .
+                    -> 10.0.2.255
+                    .
+                    .
+                    -> 10.0.63.255
+
+
+        -> Finance Subnet - 4k Devices - /20
+
+            -> Finance Subnet Range is 10.0.64.0 - 10.0.79.255
+
+                -> 10.0.0.0/20 - Incorrect, from 0 to 63 already occupied by IT Subnet
+
+                -> 10.0.64.0/20 - Correct 
+
+        -> Marketing Subnet - 4k Devices - /20
+
+            -> Marketing Subnet Range is 10.0.80.0 - 10.0.95.255
+
+                -> 10.0.80.0/20  - Correct 
+
+        -> HR Subnet - 1k Devices - /22
+
+            -> HR Subnet Range is 10.0.96.0 - 10.0.99.255
+
+                -> 10.0.96.0/22  - Correct
+
+                    -> 96 - 256
+                    -> 97 - 256
+                    -> 98 - 256
+                    -> 99 - 256
+
+
+        -> Total Exhausted So Far 
+
+            -> /18 + /20 + /20 + /22 == 16384 + 4096 + 4096 + 1024 = 25600 Devices / IP 
+
+            -> Still How Many Left == 65536 - 25600 = 39936 
