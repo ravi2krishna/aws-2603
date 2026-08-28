@@ -687,3 +687,82 @@ Company VPC CIDR - 10.0.0.0/16 (This Company Can Have 65536 Devices)
             -> /18 + /20 + /20 + /22 == 16384 + 4096 + 4096 + 1024 = 25600 Devices / IP 
 
             -> Still How Many Left == 65536 - 25600 = 39936 
+
+
+Class - 9
+==========
+
+    -> Every CIDR We Create In AWS, There is a Reservation Of IP addresses
+        
+        -> The first four IP addresses and the last IP address in 
+        each subnet CIDR block are not available for you to use, 
+        and cannot be assigned to an instance.
+
+        -> For Example We Have an Requirement For Subnet With 250 Devices 
+
+            -> 10.0.0.0/24 - 256 Devices / IP Addresses 
+            
+                -> 10.0.0.0: Network address.
+                -> 10.0.0.1: Reserved by AWS for the VPC router.
+                -> 10.0.0.2: Reserved by AWS for Amazon DNS server.
+                -> 10.0.0.3: Reserved by AWS for future use.
+                -> 10.0.0.4: You Can Use For Servers 
+                -> 10.0.0.5: You Can Use For Servers 
+                -> 10.0.0.6: You Can Use For Servers 
+                -> 10.0.0.7: You Can Use For Servers 
+                -> .
+                -> .
+                -> 10.0.0.254: You Can Use For Servers 
+                -> 10.0.0.255: Network broadcast address.
+
+
+    -> Most Popular Applications
+        
+        -> https://en.wikipedia.org/wiki/Programming_languages_used_in_most_popular_websites
+
+    
+    -> Requirement Given by XYZ Organization for Custom VPC 
+
+        -> XYZ is going to setup the LMS / CRM / HRMS App environment 
+        i.e servers on AWS, their clients are from XYZ (REGION) Location (Ohio) 
+
+            -> NOTE: Assuming the customers for this application are from India, 
+            then we would select either Mumbai or Hyderabad as Region
+
+        -> They are gonna host Servers
+
+        -> These servers are grouped into three subnets 
+
+            -> First Subnet is for web servers, around 4k Servers 
+
+            -> Second Subnet is for app servers, around 2k Servers 
+
+            -> Third Subnet is for database servers, around 1k Servers
+
+        -> In the future, they might add more number of subnets 
+        i.e cache subnets, load balancer subnet, HR Subnet, Finance Subnet etc
+
+            -> 65536 - (4096+2048+1024) = 65536-7168 = 58368 Devices Space Left 
+
+        -> The Web Servers and App Servers needs to be communicated from internet (WWW)
+
+            -> We Need Internet Gateway & Public IP 
+
+        -> The Database servers needs to be communicated only from App Servers, 
+        but not from internet (WWW) - Local Route / Intranet 
+
+            -> We Have Local Route 
+
+            -> https://media.geeksforgeeks.org/wp-content/uploads/20231108115918/Three-Tier-architecture.png
+        
+        -> Coming to security of Web Servers, they should have only 
+            -> SSH traffic enabled for administration from internet
+            -> HTTP traffic for clients from internet
+
+        -> Coming to security of App Servers, they should have only 
+            -> SSH traffic enabled for administration from internet
+            -> HTTP traffic port 8080 for clients from internet
+
+        -> Coming to security of Database Servers, 
+            -> SSH traffic enabled from web servers only
+            -> Postgres Database Traffic Allowed from App Servers
