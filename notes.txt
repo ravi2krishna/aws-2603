@@ -766,3 +766,25 @@ Class - 9
         -> Coming to security of Database Servers, 
             -> SSH traffic enabled from web servers only
             -> Postgres Database Traffic Allowed from App Servers
+
+
+Class - 10
+==========
+
+    -> Creating Custom VPC Based On Given Requirements 
+
+        -> 10.0.0.0/20 - 1st Web Subnet - 4096 devices
+
+            -> 10.0.0.0 - 10.0.15.255
+
+        -> 10.0.16.0/21 - 2nd App Subnet - 2048 devices 
+
+            -> 10.0.16.0 - 10.0.23.255
+
+        -> 10.0.24.0/22 - 3rd Database Subnet - 1024 devices 
+
+            -> 10.0.24.0 - 10.0.27.255
+
+
+
+            
