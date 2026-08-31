@@ -786,5 +786,118 @@ Class - 10
             -> 10.0.24.0 - 10.0.27.255
 
 
+Class - 11
+==========
 
+    -> Custom HRMS VPC Verified and Completed
+
+        -> Time - 1 Hour To Complete HRMS Requirement 
+
+    -> Now We Have New Requirement From Customer To Create VPC For CRM App 
+
+        -> Requirement Given by XYZ Organization for Custom VPC 
+
+        -> XYZ is going to setup the CRMApp environment 
+        i.e servers on AWS, their clients are from XYZ (REGION) Location (Ohio) 
+
+            -> NOTE: Assuming the customers for this application are from India, 
+            then we would select either Mumbai or Hyderabad as Region
+
+        -> They are gonna host Servers
+
+        -> These servers are grouped into three subnets 
+
+            -> First Subnet is for web servers, around 2k Servers 
+
+            -> Second Subnet is for app servers, around 1k Servers 
+
+            -> Third Subnet is for database servers, around 500 Servers
+
+        -> In the future, they might add more number of subnets 
+        i.e cache subnets, load balancer subnet, HR Subnet, Finance Subnet etc
+
+        -> The Web Servers and App Servers needs to be communicated from internet (WWW)
+
+            -> We Need Internet Gateway & Public IP 
+
+        -> The Database servers needs to be communicated only from App Servers, 
+        but not from internet (WWW) - Local Route / Intranet 
+
+            -> We Have Local Route 
+
+            -> https://media.geeksforgeeks.org/wp-content/uploads/20231108115918/Three-Tier-architecture.png
+        
+        -> Coming to security of Web Servers, they should have only 
+            -> SSH traffic enabled for administration from internet on port 50222
+            -> HTTP traffic for clients from internet Port 80
+            -> HTTPS traffic for clients from internet Port 443
+
+        -> Coming to security of App Servers, they should have only 
+            -> SSH traffic enabled for administration from internet on port 50223
+            -> HTTP traffic port 9090 for clients from internet
+
+        -> Coming to security of Database Servers, 
+            -> SSH traffic enabled from web servers only
+            -> MySQL Database Traffic Allowed from App Servers
             
+        -> Time - 1 Hour To Complete CRM Requirement 
+
+    -> Now We Have New Requirement From Customer To Create VPC For LMS App  
+
+        -> Time - 1 Hour To Complete LMS Requirement 
+
+    -> NOTE: Can We Be More Efficient In Managing Cloud Resources ?? 
+
+        -> Earlier We Create HRMS VPC Using Geographical User Interface (GUI) (Beginner) 
+
+            -> 1 Hour To Complete 
+
+        -> Now We Create CRM VPC Using Geographical User Interface (GUI) (Beginner) 
+
+            -> 1 Hour To Complete 
+        
+        -> Next We Want To Create LMS VPC Using Geographical User Interface (GUI) (Beginner) 
+
+            -> 1 Hour To Complete 
+
+        -> Total Work Time is 3 Hours in Geographical User Interface (GUI) (Beginner) 
+
+    
+    -> NOTE: We Can Also Setup Infrastructure Using Command Line Interface (CLI) (Intermediate) 
+
+        -> Earlier We Create HRMS VPC Using Command Line Interface (CLI) (Intermediate) 
+
+            -> First Time - 1 Hour To Complete 
+
+        -> Now We Create CRM VPC Using Command Line Interface (CLI) (Intermediate) 
+
+            -> Second Time - 15 Mins To Complete 
+
+        -> Next We Want To Create LMS VPC Using Command Line Interface (CLI) (Intermediate) 
+
+            -> 15 Mins To Complete 
+
+        -> Total Work Time is 1.5 Hours in Command Line Interface (CLI) (Intermediate) 
+
+    
+    
+    -> AWS CLI 
+
+        -> AWS Command Line Interface (CLI) is a Unified Tool 
+        To Mange AWS Services Using Commands. 
+
+            -> Refer - https://aws.amazon.com/cli/ 
+
+            -> Commands Reference - https://docs.aws.amazon.com/cli/latest/
+
+
+    -> AWS Cloud Shell 
+
+        -> AWS CloudShell is a browser-based, pre-authenticated terminal 
+        that lets you securely manage and explore your AWS resources directly 
+        from the AWS Management Console.
+
+        -> It eliminates local setup by automatically inheriting your IAM credentials.
+
+        -> Zero Configuration: No need to install the AWS CLI, configure access keys
+
