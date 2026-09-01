@@ -901,3 +901,79 @@ Class - 11
 
         -> Zero Configuration: No need to install the AWS CLI, configure access keys
 
+
+Class - 12
+==========
+
+    -> Creating VPC Components Of CRM using CLI
+
+        -> Using AWS Cloud Shell
+
+            -> aws ec2 create-vpc --cidr-block 10.0.0.0/16
+            -> aws ec2 create-tags --resources vpc-0709ff3308e19540e --tags Key=Name,Value=crm
+            -> aws ec2 create-subnet --vpc-id vpc-0709ff3308e19540e --cidr-block 10.0.0.0/21
+            -> aws ec2 create-tags --resources subnet-02424af9c7b9c720e --tags Key=Name,Value=crm-web-subnet
+            -> aws ec2 modify-subnet-attribute --subnet-id subnet-02424af9c7b9c720e --map-public-ip-on-launch
+            -> aws ec2 create-subnet --vpc-id vpc-0709ff3308e19540e --cidr-block 10.0.8.0/22
+            -> aws ec2 create-tags --resources subnet-0288e77d575e5fc61 --tags Key=Name,Value=crm-app-subnet
+            -> aws ec2 modify-subnet-attribute --subnet-id subnet-0288e77d575e5fc61 --map-public-ip-on-launch
+            -> aws ec2 create-subnet --vpc-id vpc-0709ff3308e19540e --cidr-block 10.0.12.0/23
+            -> aws ec2 create-tags --resources subnet-0a0fbb33918be48c9 --tags Key=Name,Value=crm-db-subnet
+            -> aws ec2 create-internet-gateway 
+            -> aws ec2 create-tags --resources igw-0bd6cb317ce4e80f8 --tags Key=Name,Value=crm-internet-gateway
+            -> aws ec2 attach-internet-gateway --internet-gateway-id igw-0bd6cb317ce4e80f8 --vpc-id vpc-0709ff3308e19540e
+            -> aws ec2 create-tags --resources rtb-043ebe6a18da72272 --tags Key=Name,Value=crm-db-rt
+            -> aws ec2 associate-route-table --route-table-id rtb-043ebe6a18da72272 --subnet-id subnet-0a0fbb33918be48c9
+            -> aws ec2 create-route-table --vpc-id vpc-0709ff3308e19540e
+            -> aws ec2 create-tags --resources rtb-067a80b0f805a5ded --tags Key=Name,Value=crm-web-app-rt
+            -> aws ec2 create-route --route-table-id rtb-067a80b0f805a5ded --destination-cidr-block 0.0.0.0/0 --gateway-id igw-0bd6cb317ce4e80f8
+            -> aws ec2 associate-route-table --route-table-id rtb-067a80b0f805a5ded --subnet-id subnet-02424af9c7b9c720e
+            -> aws ec2 associate-route-table --route-table-id rtb-067a80b0f805a5ded --subnet-id subnet-0288e77d575e5fc61
+            -> aws ec2 create-tags --resources acl-0958f327b5945abf0 --tags Key=Name,Value=crm-nacl 
+            -> aws ec2 create-security-group --group-name "crm-web-sg" --description "Security group for web servers" --vpc-id "vpc-0709ff3308e19540e"
+            -> aws ec2 authorize-security-group-ingress --group-id "sg-0bd426fe4ac6e14f4" --protocol tcp --port 50222 --cidr "0.0.0.0/0"
+            -> aws ec2 authorize-security-group-ingress --group-id "sg-0bd426fe4ac6e14f4" --protocol tcp --port 80 --cidr "0.0.0.0/0"
+            -> aws ec2 authorize-security-group-ingress --group-id "sg-0bd426fe4ac6e14f4" --protocol tcp --port 443 --cidr "0.0.0.0/0"
+            -> aws ec2 create-security-group --group-name "crm-app-sg" --description "Security group for app servers" --vpc-id "vpc-0709ff3308e19540e"
+            -> aws ec2 authorize-security-group-ingress --group-id "sg-0c7d87ffb068d6ba0" --protocol tcp --port 50223 --cidr "0.0.0.0/0"
+            -> aws ec2 authorize-security-group-ingress --group-id "sg-0c7d87ffb068d6ba0" --protocol tcp --port 9090 --cidr "0.0.0.0/0"
+            -> aws ec2 create-security-group --group-name "crm-db-sg" --description "Security group for db servers" --vpc-id "vpc-0709ff3308e19540e"
+            -> aws ec2 authorize-security-group-ingress --group-id "sg-0aa8adaaafa531e0e" --protocol tcp --port 22 --cidr "10.0.0.0/21"
+            -> aws ec2 authorize-security-group-ingress --group-id "sg-0aa8adaaafa531e0e" --protocol tcp --port 3306 --cidr "10.0.8.0/22"
+            
+
+    -> Creating VPC Components Of LMS using CLI
+
+        -> Using AWS Cloud Shell
+
+            -> aws ec2 create-vpc --cidr-block 10.0.0.0/16
+            -> aws ec2 create-tags --resources vpc-0ddba2e6ba3a1b7b3 --tags Key=Name,Value=lms
+            -> aws ec2 create-subnet --vpc-id vpc-0ddba2e6ba3a1b7b3 --cidr-block 10.0.0.0/21
+            -> aws ec2 create-tags --resources subnet-02424af9c7b9c720e --tags Key=Name,Value=lms-web-subnet
+            -> aws ec2 modify-subnet-attribute --subnet-id subnet-02424af9c7b9c720e --map-public-ip-on-launch
+            -> aws ec2 create-subnet --vpc-id vpc-0ddba2e6ba3a1b7b3 --cidr-block 10.0.8.0/22
+            -> aws ec2 create-tags --resources subnet-0288e77d575e5fc61 --tags Key=Name,Value=lms-app-subnet
+            -> aws ec2 modify-subnet-attribute --subnet-id subnet-0288e77d575e5fc61 --map-public-ip-on-launch
+            -> aws ec2 create-subnet --vpc-id vpc-0ddba2e6ba3a1b7b3 --cidr-block 10.0.12.0/23
+            -> aws ec2 create-tags --resources subnet-0a0fbb33918be48c9 --tags Key=Name,Value=lms-db-subnet
+            -> aws ec2 create-internet-gateway 
+            -> aws ec2 create-tags --resources igw-0bd6cb317ce4e80f8 --tags Key=Name,Value=lms-internet-gateway
+            -> aws ec2 attach-internet-gateway --internet-gateway-id igw-0bd6cb317ce4e80f8 --vpc-id vpc-0ddba2e6ba3a1b7b3
+            -> aws ec2 create-tags --resources rtb-043ebe6a18da72272 --tags Key=Name,Value=lms-db-rt
+            -> aws ec2 associate-route-table --route-table-id rtb-043ebe6a18da72272 --subnet-id subnet-0a0fbb33918be48c9
+            -> aws ec2 create-route-table --vpc-id vpc-0ddba2e6ba3a1b7b3
+            -> aws ec2 create-tags --resources rtb-067a80b0f805a5ded --tags Key=Name,Value=lms-web-app-rt
+            -> aws ec2 create-route --route-table-id rtb-067a80b0f805a5ded --destination-cidr-block 0.0.0.0/0 --gateway-id igw-0bd6cb317ce4e80f8
+            -> aws ec2 associate-route-table --route-table-id rtb-067a80b0f805a5ded --subnet-id subnet-02424af9c7b9c720e
+            -> aws ec2 associate-route-table --route-table-id rtb-067a80b0f805a5ded --subnet-id subnet-0288e77d575e5fc61
+            -> aws ec2 create-tags --resources acl-0958f327b5945abf0 --tags Key=Name,Value=lms-nacl 
+            -> aws ec2 create-security-group --group-name "lms-web-sg" --description "Security group for web servers" --vpc-id "vpc-0ddba2e6ba3a1b7b3"
+            -> aws ec2 authorize-security-group-ingress --group-id "sg-0bd426fe4ac6e14f4" --protocol tcp --port 50222 --cidr "0.0.0.0/0"
+            -> aws ec2 authorize-security-group-ingress --group-id "sg-0bd426fe4ac6e14f4" --protocol tcp --port 80 --cidr "0.0.0.0/0"
+            -> aws ec2 authorize-security-group-ingress --group-id "sg-0bd426fe4ac6e14f4" --protocol tcp --port 443 --cidr "0.0.0.0/0"
+            -> aws ec2 create-security-group --group-name "lms-app-sg" --description "Security group for app servers" --vpc-id "vpc-0ddba2e6ba3a1b7b3"
+            -> aws ec2 authorize-security-group-ingress --group-id "sg-0c7d87ffb068d6ba0" --protocol tcp --port 50223 --cidr "0.0.0.0/0"
+            -> aws ec2 authorize-security-group-ingress --group-id "sg-0c7d87ffb068d6ba0" --protocol tcp --port 9090 --cidr "0.0.0.0/0"
+            -> aws ec2 create-security-group --group-name "lms-db-sg" --description "Security group for db servers" --vpc-id "vpc-0ddba2e6ba3a1b7b3"
+            -> aws ec2 authorize-security-group-ingress --group-id "sg-0aa8adaaafa531e0e" --protocol tcp --port 22 --cidr "10.0.0.0/21"
+            -> aws ec2 authorize-security-group-ingress --group-id "sg-0aa8adaaafa531e0e" --protocol tcp --port 3306 --cidr "10.0.8.0/22"
