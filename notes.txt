@@ -977,3 +977,85 @@ Class - 12
             -> aws ec2 create-security-group --group-name "lms-db-sg" --description "Security group for db servers" --vpc-id "vpc-0ddba2e6ba3a1b7b3"
             -> aws ec2 authorize-security-group-ingress --group-id "sg-0aa8adaaafa531e0e" --protocol tcp --port 22 --cidr "10.0.0.0/21"
             -> aws ec2 authorize-security-group-ingress --group-id "sg-0aa8adaaafa531e0e" --protocol tcp --port 3306 --cidr "10.0.8.0/22"
+
+
+Class - 13
+==========
+
+    -> Infrastructure As Code - IaC 
+
+        -> Infrastructure as code is the process of managing and provisioning 
+        computer data centers through machine-readable definition files [CODE].
+
+            -> NOTE: Can We Be More Efficient In Managing Cloud Resources ?? 
+
+            -> Earlier We Create HRMS VPC Using Geographical User Interface (GUI) (Beginner) 
+
+                -> 1 Hour To Complete 
+
+            -> Now We Create CRM VPC Using Geographical User Interface (GUI) (Beginner) 
+
+                -> 1 Hour To Complete 
+            
+            -> Next We Want To Create LMS VPC Using Geographical User Interface (GUI) (Beginner) 
+
+                -> 1 Hour To Complete 
+
+            -> Total Work Time is 3 Hours in Geographical User Interface (GUI) (Beginner) 
+
+        
+        
+        -> NOTE: We Can Also Setup Infrastructure Using Command Line Interface (CLI) (Intermediate) 
+
+            -> Earlier We Create HRMS VPC Using Command Line Interface (CLI) (Intermediate) 
+
+                -> First Time - 1 Hour To Complete 
+
+            -> Now We Create CRM VPC Using Command Line Interface (CLI) (Intermediate) 
+
+                -> Second Time - 15 Mins To Complete 
+
+            -> Next We Want To Create LMS VPC Using Command Line Interface (CLI) (Intermediate) 
+
+                -> 15 Mins To Complete 
+
+            -> Total Work Time is 1.5 Hours in Command Line Interface (CLI) (Intermediate) 
+
+        
+        
+        -> NOTE: We Can Also Setup Infrastructure Using Code (Scripts) (Professional) 
+
+            -> Earlier We Create HRMS VPC Using Code (Professional) 
+
+                -> First Time - 1 Hour To Complete 
+
+            -> Now We Create CRM VPC Using Code (Professional) 
+
+                -> Second Time - 2 Mins To Complete 
+
+            -> Next We Want To Create LMS VPC Using Code (Professional) 
+
+                -> 2 Mins To Complete 
+
+            -> Total Work Time is 1 Hours in Command Line Interface (CLI) (Intermediate) 
+
+        
+        -> NOTE: Initially You Begin With GUI - AWS Management Console - Junior Cloud Engineer (0-2 Years)
+
+        -> NOTE: Later You Move To CLI - AWS CLI Tool - AWS Administrator (2+ Years)
+
+        -> NOTE: Later You Move To CODE - AWS Cloud Formation - AWS DevOps Engineer (5+ Years)
+
+    -> AWS Cloud Formation 
+
+        -> AWS CloudFormation is an Infrastructure as Code (IaC) service 
+        that automates the provisioning and management of AWS resources.  
+
+        -> By defining resources in JSON or YAML templates, 
+        you can safely model, test, and deploy identical infrastructure stacks 
+        across multiple AWS accounts and regions.
+
+    
+    -> Cloud Formation Template 
+
+        -> https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-formats.html 

@@ -1,0 +1,61 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: A CloudFormation template for hrms Application Infrastructure.
+# Resources section
+Resources:
+  hrmsvpc: 
+    Type: AWS::EC2::VPC
+    Properties: 
+      CidrBlock: 10.0.0.0/16
+      EnableDnsSupport: 'true'
+      EnableDnsHostnames: 'true'
+      Tags:
+       - Key: Name
+         Value: hrms
+
+  hrmswebsubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref hrmsvpc
+      CidrBlock: 10.0.0.0/21
+      AvailabilityZone: "us-east-2a"
+      MapPublicIpOnLaunch: "true"
+      Tags:
+      - Key: Name
+        Value: hrms-web-subnet
+  
+  hrmsappsubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref hrmsvpc
+      CidrBlock: 10.0.8.0/22
+      AvailabilityZone: "us-east-2b"
+      MapPublicIpOnLaunch: "true"
+      Tags:
+      - Key: Name
+        Value: hrms-app-subnet
+
+  hrmsdbsubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref hrmsvpc
+      CidrBlock: 10.0.12.0/23
+      AvailabilityZone: "us-east-2c"
+      MapPublicIpOnLaunch: "false"
+      Tags:
+      - Key: Name
+        Value: hrms-db-subnet
+
+  hrmsInternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+      - Key: Name
+        Value: hrms-internet-gateway
+
+  hrmsAttachGateway:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId:
+        Ref: hrmsvpc
+      InternetGatewayId:
+        Ref: hrmsInternetGateway

@@ -1,0 +1,61 @@
+AWSTemplateFormatVersion: 2010-09-09
+Description: A CloudFormation template for LMS Application Infrastructure.
+# Resources section
+Resources:
+  lmsvpc: 
+    Type: AWS::EC2::VPC
+    Properties: 
+      CidrBlock: 10.0.0.0/16
+      EnableDnsSupport: 'true'
+      EnableDnsHostnames: 'true'
+      Tags:
+       - Key: Name
+         Value: lms
+
+  lmswebsubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref lmsvpc
+      CidrBlock: 10.0.0.0/21
+      AvailabilityZone: "us-east-2a"
+      MapPublicIpOnLaunch: "true"
+      Tags:
+      - Key: Name
+        Value: lms-web-subnet
+  
+  lmsappsubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref lmsvpc
+      CidrBlock: 10.0.8.0/22
+      AvailabilityZone: "us-east-2b"
+      MapPublicIpOnLaunch: "true"
+      Tags:
+      - Key: Name
+        Value: lms-app-subnet
+
+  lmsdbsubnet:
+    Type: AWS::EC2::Subnet
+    Properties:
+      VpcId: !Ref lmsvpc
+      CidrBlock: 10.0.12.0/23
+      AvailabilityZone: "us-east-2c"
+      MapPublicIpOnLaunch: "false"
+      Tags:
+      - Key: Name
+        Value: lms-db-subnet
+
+  lmsInternetGateway:
+    Type: AWS::EC2::InternetGateway
+    Properties:
+      Tags:
+      - Key: Name
+        Value: lms-internet-gateway
+
+  lmsAttachGateway:
+    Type: AWS::EC2::VPCGatewayAttachment
+    Properties:
+      VpcId:
+        Ref: lmsvpc
+      InternetGatewayId:
+        Ref: lmsInternetGateway
