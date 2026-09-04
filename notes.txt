@@ -1059,3 +1059,49 @@ Class - 13
     -> Cloud Formation Template 
 
         -> https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/template-formats.html 
+
+
+Class - 14
+==========
+
+    -> NOTE: Eventually In Datacenters, We Have Servers and Servers Host Applications.
+
+    -> Inside AWS Server Management Is Done Using EC2 Service 
+
+    -> EC2 - Elastic Compute Cloud 
+
+        -> EC2 allows users to rent virtual computers (Servers/Machines) on which 
+        you can run your own computer applications.
+
+    
+        -> Computer has hardware                        -> Server has Instance Type [cpu + ram]
+            i3 / i5 / 4 GB RAM etc                          t2.micro, t2.medium, t2.large etc 
+
+        -> Computer has hard disk                       -> Instance has EBS (Elastic Block) Storage
+            250 GB / 500 GB / 1 TB                          250 GB / 500 GB / 1 TB                      
+        
+        -> Computer has network                         -> Instance has VPC 
+
+        -> Computer has operating system                -> Instance has AMI - Amazon Machine Image 
+
+        -> Computer has Authentication                  -> Instance has Authentication
+            username & password                             key pairs (public & private key)
+
+        -> Computer has applications                    -> Instance has applications
+            chrome / notepad etc                            myntra / flipkart / netflix etc 
+
+
+    -> How To Setup Servers(Instances) On AWS
+
+        -> Linux Server(Instance) Setup Done
+
+        -> To Login, We Can Use SSH Client Software 
+
+            -> Terminal / Powershell / GitBash etc 
+
+            -> Syntax To Connect With EC2 Instance / Server
+
+                -> chmod 400 "aws2603.pem" 
+
+                -> ssh -i "aws2603.pem" ubuntu@13.232.94.114
+
