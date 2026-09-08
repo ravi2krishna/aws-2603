@@ -1180,3 +1180,62 @@ Class - 15
         -> NOTE: Every Storage Type In AWS is Used for 
         Different Purposes and Prices Varies 
 
+
+Class - 16
+==========
+
+    -> Elastic Block Storage (EBS) (EBS Volume)
+
+        -> Used For Server Storage 
+
+            -> NOTE: In Last Lab We Have Ecommerce Application Using Ubuntu as OS 
+            and Nginx as Web Server, the OS and Nginx were present on EBS Volume. 
+
+        -> EBS Volume Acts Like Hard Disk For Server 
+
+        -> EBS Has Root Volume and Additional Volume 
+
+            -> Root Volume is like Primary Disk (OS Installations & Software Installations)
+
+            -> Additional Volumes are like Secondary Disks (External HDD, Pen drives)
+
+            -> While Setting Up Server Root Volume is must and we would have only 
+            one root volume for instance, and we have multiple Additional Volumes
+
+            -> Based On Availability Zone the instance is launched,  EBS Volume 
+            will be in same Availability zone(locked with each other)
+
+            -> lsblk
+
+            -> df -h 
+
+            -> sudo mkfs -t ext4 /dev/sdb1 (t2)
+
+            -> sudo mkfs -t ext4 /dev/nvme1n1
+
+            -> sudo mkdir /add-data 
+
+            -> sudo mount /dev/nvme1n1 /add-data
+
+            -> df -h 
+
+            -> Download Git Software
+
+                -> sudo wget https://github.com/git-for-windows/git/releases/download/v2.55.0.windows.5/Git-2.55.0.5-64-bit.exe
+
+        -> How To Create Backup For Data Storage 
+
+            -> Snapshots (Both Root & Additional Volume)
+
+            -> AMI's (Root Volumes)
+
+        -> Limitation Of EBS Volume 
+
+
+
+
+
+
+
+
+
