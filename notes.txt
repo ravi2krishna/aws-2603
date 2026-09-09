@@ -1232,6 +1232,33 @@ Class - 16
         -> Limitation Of EBS Volume 
 
 
+Class - 17
+==========
+
+    ->  Custom Amazon Machine Image (AMI) acts as a pre-configured template 
+    (often called a "Golden Image") that lets you boot a brand new Amazon EC2 instance 
+    with your operating system, software, and settings already baked in.
+
+    -> Instead of configuring a fresh server from scratch every time using scripts, 
+    a custom AMI captures the exact state of a configured instance and 
+    saves it for future deployment.
+
+    -> Assume Our Data Center (Availability Zone) is DOWN, then again 
+    we need to launch new instance and setup the whole process 
+    from scratch again, which can be overcome by Using AMI 
+
+    -> If We Need This Application Spanned Across Multiple 
+    Data Center (Availability Zone) For High Availability 
+    again we need to manually setup process again. 
+
+    -> NOTE: When We Create an AMI, behind the Scenes Snapshot 
+    is also created. 
+
+    
+
+
+
+
 
 
 
