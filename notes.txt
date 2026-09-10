@@ -1255,6 +1255,99 @@ Class - 17
     is also created. 
 
     
+Class - 18
+==========
+
+    -> EBS - Limitations 
+
+        -> Using EBS, We Cannot Span the Data Across Multiple Zones
+
+        -> Using EBS, We Cannot Attach Single Volume To Multiple Instances 
+
+        -> Using EBS, We Can Only Scale Up, But NO Scaling Down
+
+            -> Created 500 GB EBS Volume, Used Only 100 GB, 
+            But We Need To Pay For 500 GB 
+
+        -> Using EBS, We Can Get Data Max Up to TB's (65)
+
+
+    -> My Customer New Requirement Is 
+
+        -> Span Data Across Multiple Zones
+
+        -> Attach Single Data Source To Multiple Instances 
+
+        -> Wants Dynamic Storage(Should Scale Up If Needed and Scale Down As Well)
+
+            -> Say You Added 100 GB Of Data, Pay Only For 100 GB, later after a Week
+            Removed 25 GB Data, then prices automatically applies only for 75 GB 
+
+        -> Wants Petabyte Level Storage 
+
+    
+    -> NOTE: To Fullfil Above Requirements, AWS Provides EFS Storage
+
+    
+    -> Elastic File Storage (EFS)
+
+        -> Amazon Elastic File System (EFS) provides a simple, scalable 
+        fully managed elastic NFS file system for AWS EC2  
+    
+        -> A Network File System (NFS) is a distributed file system protocol that 
+        allows a client computer to access and manage files over a network 
+        exactly as if they were stored on its local hard drives.
+
+            -> https://edgeone.ai/media/42b9d9ea-578c-4c96-b7f9-346f3c6cf2c0.png
+
+
+        -> Using EFS 
+
+            -> Using EFS, We Can Span the Data Across Multiple Zones
+
+            -> Using EFS, We Can Attach Single Data Source To Multiple Instances 
+
+            -> Using EFS, We Can Only Scale Up & Scaling Down
+
+                -> Only Pay For What You Use
+
+            -> Using EFS, We Can Get Data Up to PB's (8000)
+
+                -> 1 PB = 1000 TB's 
+
+        
+        -> NOTE: You Will Pay Premium price For These Features 
+
+            -> For an 500 GB Of EBS Storage - You Pay $50
+
+            -> For an 500 GB Of EFS Storage - You Pay $150
+
+        -> When It Comes To EFS, We Need To Allow NFS Rules in Security Group 
+
+            -> NFS Goes With Port 2049 
+
+            -> NOTE: This Port is Applicable For EFS System (Not EC2 Instances)
+
+        -> NOTE: You Cannot Use EFS As a Root Disk (NO Operating System (OS))
+
+        -> NOTE: Install NFS Utilities In Your Instances To Access EFS 
+
+            -> sudo apt-get install nfs-common -y
+
+        -> To Work With EFS, You Need To Create One or More Mount Targets 
+
+            -> If there are multiple subnets in an AZ, 
+            you can create a mount target in one of the subnets, 
+            then all the instances in that AZ will share the mount target.
+
+            -> AWS recommends that you create mount targets in all the AZ's, 
+            so that you can easily mount the file system on EC2 instances 
+            that you might launch in "any zone in future", 
+            as there are no charges for mount targets.
+
+        -> NOTE: When EFS File System is created, we get Unique DNS
+
+            -> fs-03e11960ea75c49ad.efs.ap-south-1.amazonaws.com
 
 
 
