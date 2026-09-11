@@ -1350,6 +1350,55 @@ Class - 18
             -> fs-03e11960ea75c49ad.efs.ap-south-1.amazonaws.com
 
 
+Class - 19
+==========
+
+    -> AWS S3 (Simple Storage Service)
+
+        -> Object storage built to retrieve any amount of data from anywhere.
+
+        -> S3 is Internet Based Storage (Google Drive)
+
+        -> S3 is Low Cost Storage 
+
+    -> S3 Buckets 
+
+        -> Data is stored in Buckets, Buckets are the main storage containers of S3
+
+    -> S3 Objects 
+
+        -> Objects are the fundamental entities stored in Amazon S3. An Object is a file.
+
+    -> NOTE: In S3 We Can Store Unlimited Objects, each object maximum size is up to 5 TB 
+
+    -> By default, all buckets & objects are private.
+
+        -> To Enable Access To Objects, First Enable Access On Buckets then Objects
+
+        -> Using Policies We Can Control Permissions In Better Way Using JSON Scripts 
+
+    -> S3 Storage Classes 
+
+        -> A Storage Class represents the classification assigned to each object in S3. 
+
+        -> https://aws.amazon.com/s3/storage-classes/
+
+        -> Each Storage Class Has Different Availability and Pricing Structure
+
+            -> S3 Standard - 99.99% Availability - For 500 GB - 11.50 USD
+
+            -> S3 Standard IA - 99.9% Availability - For 500 GB - 6.25 USD
+
+            -> S3 One Zone IA - 99.5% Availability - For 500 GB - 5.00 USD
+
+    -> S3 Versioning 
+
+        -> S3 versioning is a feature to manage and store versions of an object
+
+        -> S3 versioning protects your data against accidental overrides and deletion.
+
+
+
 
 
 
