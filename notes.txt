@@ -1399,6 +1399,74 @@ Class - 19
 
 
 
+Class - 20
+==========
+
+    -> S3 Static Web Hosting 
+
+        -> We Can Use S3 To Host Websites, Without Using Any 
+        Compute Power From EC2. 
+
+        -> NOTE: Using This Use Case, you can also understand how to 
+        enable Permissions on Multiple Objects at same time. 
+
+        -> Application Code - https://github.com/ravi2krishna/ecomm.git 
+
+        -> NOTE: Earlier To Setup Above Application, We Need 
+        EC2 Server, EBS Volume (Compute Power)
+
+        -> Now Using S3 Static Web Hosting To Deploy Above Application 
+
+
+    
+    -> AWS IAM
+
+        -> AWS Identity and Access Management is a service that 
+        helps you securely control access to AWS Resources. 
+
+        -> Root User 
+
+            -> User that is created when we Sign up With AWS Account
+            (email that you provided when creating AWS Account)
+
+            -> Root User Has FULL Rights to your AWS Account
+            (No Restrictions)
+
+        -> IAM User 
+
+            -> User that is created by Root User, 
+            which has varying degree of access (read/write) 
+            to your AWS Account.
+
+            -> Out Of Box, IAM Users Have No Permissions
+            To Any Part Of Your Account. 
+
+            -> NOTE: Based On Requirements, You will Add 
+            Appropriate Permissions 
+
+        
+        -> IAM User Access Ways 
+
+            -> Management Console Access 
+
+                -> Based On Humans (Like Developer, Tester, Admin, Manager etc)
+                you will be using Browser.
+
+            -> Programmatic Access 
+
+                -> Based On Softwares(Kubernetes) / Tools (AWS CLI) / API's etc 
+                Non Human Based 
+
+
+        
+        -> IAM Policies 
+
+            -> IAM Policy is an entity, when attached to and Identity(User)
+            it Defines Their Permissions. 
+
+            -> A policy is an object in AWS that defines permissions.
+
+
 
 
 
