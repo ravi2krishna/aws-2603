@@ -1467,6 +1467,23 @@ Class - 20
             -> A policy is an object in AWS that defines permissions.
 
 
+Class - 21
+==========
+
+    -> IAM Continued 
+
+    -> IAM User Groups 
+
+        -> A user group is a collection of IAM users. 
+
+        -> Grouping users makes it easier to assign and manage 
+        permission policies collectively rather than individually.
+
+    
+    -> IAM Roles     
+
+        -> Temporary, permission-based credentials that can be assumed by 
+        trusted entities like AWS services, EC2 instances
 
 
 
