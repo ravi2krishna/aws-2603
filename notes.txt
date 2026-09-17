@@ -1487,6 +1487,40 @@ Class - 21
 
 
 
+Class - 22
+==========
+
+    -> AWS Relational Database Service (RDS)
+
+        -> Static Data Means Fixed Data For Every User 
+
+            -> google.com: same site for everyone 
+
+        -> Dynamic Data Means Variable Data For Every User 
+
+            -> gmail: every user has their own inbox 
+
+        -> Database is a collection Of "Tables"
+
+        -> Tables Contain Data in Rows and Columns just like sheets 
+
+        -> CRUD Operations 
+
+            -> Create Data 
+
+            -> Read Data 
+
+            -> Update Data
+
+            -> Delete Data
+
+        -> NOTE: Like we have EC2 Instance, which provides General Purpose
+        computing(IAAS) to host any type of application
+
+        -> NOTE: Likewise we have RDS Instance, which provides 
+        Database As Service(PAAS) to host databases on the cloud. 
+
+        
 
 
 
